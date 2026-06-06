@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Geist:wght@400;500;700&family=Noto+Serif+SC:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #e6e1e5;
+  background: #1a1035;
+  font-family: "Be Vietnam Pro", Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.celestial-bg {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(205, 192, 239, 0.16), transparent 30%),
+    radial-gradient(circle at 86% 22%, rgba(255, 215, 0, 0.13), transparent 24%),
+    radial-gradient(circle at 55% 84%, rgba(199, 125, 255, 0.16), transparent 28%),
+    linear-gradient(180deg, #1a1035 0%, #141316 52%, #0b061a 100%);
+}
+
+.ink-paper {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0%, rgba(26, 16, 53, 0.9) 72%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+}
+
+.gold-dust {
+  background-image: radial-gradient(rgba(255, 215, 0, 0.7) 1px, transparent 1px);
+  background-size: 38px 38px;
+  opacity: 0.12;
+}
+
+.cloud-scroll {
+  background:
+    radial-gradient(ellipse at 10% 20%, rgba(255, 249, 239, 0.12), transparent 25%),
+    radial-gradient(ellipse at 90% 30%, rgba(205, 192, 239, 0.13), transparent 26%),
+    radial-gradient(ellipse at 50% 90%, rgba(255, 215, 0, 0.1), transparent 28%);
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(26, 16, 53, 0.42);
+  backdrop-filter: blur(20px);
+}
+
+.brush-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.7), rgba(255, 255, 255, 0.2), transparent);
+}
+
+.stamp-frame {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.shimmer::after {
+  animation: shimmer 2.4s ease-in-out infinite;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.42), transparent);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+}
