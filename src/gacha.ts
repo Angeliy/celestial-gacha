@@ -9,6 +9,7 @@ export type Character = {
   quote: string;
   seal: string;
   palette: string;
+  image?: string;
 };
 
 export type PullRecord = Character & {
@@ -36,6 +37,7 @@ export const characters: Character[] = [
     quote: "愿望若有形，便会在云端燃成一枚金印。",
     seal: "天命",
     palette: "from-[#fff2a8] via-[#ffd700] to-[#ff8c00]",
+    image: "/characters/tianming.png",
   },
   {
     id: "jianxin",
@@ -46,6 +48,7 @@ export const characters: Character[] = [
     quote: "剑光不是答案，只是通向答案的一道门。",
     seal: "剑心",
     palette: "from-[#e8ddff] via-[#c77dff] to-[#5b2c83]",
+    image: "/characters/jianxin.png",
   },
   {
     id: "xingluo",
