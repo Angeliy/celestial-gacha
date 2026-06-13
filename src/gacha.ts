@@ -9,7 +9,6 @@ export type Character = {
   quote: string;
   seal: string;
   palette: string;
-  image?: string;
 };
 
 export type PullRecord = Character & {
@@ -37,8 +36,6 @@ export const characters: Character[] = [
     quote: "愿望若有形，便会在云端燃成一枚金印。",
     seal: "天命",
     palette: "from-[#fff2a8] via-[#ffd700] to-[#ff8c00]",
-    image:
-      "https://lh3.googleusercontent.com/aida/AP1WRLurBncWiPmmV6FZiVf2YTxJjj7yFk-kNFT0e003z-l_hqlGyJEofn1TP7KaBsBc_7_lrSkB0MKj-_wm_r_C6IbJ_KdQ1iw5lE71hodh0N1fMJfzDR3KDjdFvxaCitFaS4vxjXNeA0y6-W3bBUTkTw5wU1e0jjPRfGDg35tAzCz3ACC5ZL_8s-58VlLfVf3IaxwXssC4fnDIM7elMZu8PetQxmIPZXbJElf2EX2Wk0Y-rkemyulV3sgtsQ",
   },
   {
     id: "jianxin",
@@ -49,8 +46,6 @@ export const characters: Character[] = [
     quote: "剑光不是答案，只是通向答案的一道门。",
     seal: "剑心",
     palette: "from-[#e8ddff] via-[#c77dff] to-[#5b2c83]",
-    image:
-      "https://lh3.googleusercontent.com/aida/AP1WRLvAumtIeMggHBkcXb6XOdr8RNiOU9ys7HR-haLku1cR9EenPo2K10vuGclIXvMRS79GzJleiRmTRjXeiLF3dN1-R9xqRCZx0OJOcbwdHdIFB3ZwrVDRuHhQ5AqrVweSnep3p3AvM_W-aHkSI2yE8eJCccWdtuUZnXjJYVXook-V_QxqOnruh8AFAvH07SEhNIkF-Aflw4J0EFob93EXOqyd9PcW46yeXZ99dSLALbzmnqMbC4G6wGsapg",
   },
   {
     id: "xingluo",

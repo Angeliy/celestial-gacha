@@ -137,13 +137,26 @@ function CharacterFigure({ character, className = "" }: { character: Character; 
   return (
     <div className={`relative grid place-items-center overflow-hidden rounded-2xl bg-gradient-to-br ${character.palette} ${className}`}>
       <div className="cloud-scroll absolute inset-0 opacity-80" />
-      {character.image ? (
-        <img className="float-animation relative z-10 h-full max-h-[430px] object-contain drop-shadow-[0_24px_34px_rgba(0,0,0,0.45)]" src={character.image} alt={character.name} />
-      ) : (
-        <div className="relative z-10 grid h-36 w-36 place-items-center rounded-full border border-white/45 bg-primary-container/35 font-serif text-5xl font-bold text-white shadow-gold-bloom">
-          {character.name.slice(0, 1)}
+      <div className="absolute inset-x-10 top-10 h-28 rounded-full bg-white/25 blur-3xl" />
+      <div className="float-animation relative z-10 flex h-full min-h-44 w-full items-center justify-center">
+        <div className="relative grid aspect-[3/4] h-[72%] max-h-[390px] min-h-36 place-items-center rounded-t-full rounded-b-[34%] border border-white/45 bg-primary-container/35 shadow-[0_24px_45px_rgba(0,0,0,0.45)]">
+          <div className="absolute -top-4 left-1/2 h-12 w-28 -translate-x-1/2 rounded-full border border-white/35 bg-white/20 blur-[1px]" />
+          <div className="absolute left-1/2 top-10 h-24 w-24 -translate-x-1/2 rounded-full border border-white/45 bg-secondary/85 shadow-gold-bloom" />
+          <div className="absolute left-1/2 top-20 flex -translate-x-1/2 gap-8">
+            <span className="h-2 w-2 rounded-full bg-primary-container" />
+            <span className="h-2 w-2 rounded-full bg-primary-container" />
+          </div>
+          <div className="absolute left-1/2 top-28 h-2 w-10 -translate-x-1/2 rounded-full bg-cinnabar/70" />
+          <div className="absolute bottom-12 left-1/2 h-32 w-40 -translate-x-1/2 rounded-t-[46%] rounded-b-2xl border border-white/35 bg-primary-container/55" />
+          <div className="absolute bottom-14 left-1/2 h-24 w-1 -translate-x-1/2 rounded-full bg-gold/70" />
+          <div className="absolute bottom-10 left-1/2 grid h-24 w-24 -translate-x-1/2 place-items-center rounded-full border border-gold/60 bg-ink/40 font-serif text-4xl font-bold text-secondary shadow-gold-bloom">
+            {character.name.slice(0, 1)}
+          </div>
+          <div className="absolute bottom-4 rounded-full bg-white/15 px-4 py-1 font-label text-xs font-bold uppercase tracking-[0.18em] text-secondary">
+            {character.element}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
